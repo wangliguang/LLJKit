@@ -1,21 +1,20 @@
 //
-//  ExampleTests.m
-//  ExampleTests
+//  StringTests.m
+//  Example
 //
-//  Created by B.Dog on 16/4/29.
+//  Created by B.Dog on 16/5/20.
 //  Copyright © 2016年 JKSoft. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "LLJConst.h"
+
 #import "NSString+StringValidator.h"
 
-
-@interface ExampleTests : XCTestCase
+@interface StringTests : XCTestCase
 
 @end
 
-@implementation ExampleTests
+@implementation StringTests
 
 - (void)setUp {
     [super setUp];
@@ -30,12 +29,16 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    NSLog(@"自定义测试testExample");
-//    int  a = 0;
-//    XCTAssertTrue(a == 0,"a 不能等于 0");
     
+//    NSString *phoneNum = @"18842310610";
+//    NSLog(@"%d", [phoneNum isMobileTelephone]);
+//    NSString *IDNum = @"220281199106100538";
+//    NSLog(@"%d", [IDNum isIdentityCardNumber]);
+    NSString *num = @"1234";
     
-    
+//    NSLog(@"%d", [num isNumericAppearance]);
+//    NSLog(@"%d", [num isFloatAppearance]);
+    NSLog(@"%d", [num isValidateVerifyCodeWithLimits:4]);
 }
 
 - (void)testPerformanceExample {
